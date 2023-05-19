@@ -79,7 +79,7 @@
 .backgroundP{
     display: flex;
     width: 100%;
-    height: auto; 
+    height: auto;
     flex-direction: column;  
     background-color: #e10000;
 }
@@ -90,18 +90,89 @@
 
 
 .login_conteiner{
-    height: 470px;
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 15px;
-    background-color: rgba(255, 0, 0, 0.8);
-    margin-top: 55px;
-    padding-top: 45px;
+    position: absolute;
+    width: 470px;
+    height: 450px;
+    background: rgba(255, 0, 0, 0.8);
+    border-radius: 20px;
+    margin-top: 40px;
 }
 
 .login_titulo{
-    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
     display: flex;
+    color: white;
+    justify-content: center;
+    padding-top: 25px;
 }
+
+.login_subtitulo{
+    color: white;
+    position: absolute;
+    width: 297px;
+    height: 99px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 20px;
+
+}
+
+.login_input{
+    border-radius: 8px;
+    padding: 3px;
+    font-size: 12px;
+    margin-top: 12vh;
+    text-align: start;
+    margin-left: 4vh;
+    width: 365px;
+    height: 20px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.login_senha {
+    color: rgb(255, 255, 255);
+    font-size: 3.8vh;
+    margin-left: 4.8vh;
+    margin-top: 3vh;
+}
+
+.senha_input{
+    border-radius: 8px;
+    padding: 3px;
+    font-size: 12px;
+    margin-top: 1vh;
+    text-align: start;
+    margin-left: 4vh;
+    width: 365px;
+    height: 20px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 93px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(223, 224, 226, 0.2);
+    margin-left: 18vh;
+    margin-top: 10vh;
+    border: none;
+    background-color: #d9d9d9;
+}
+button:hover {
+    background-color: #5e1212;
+  }
