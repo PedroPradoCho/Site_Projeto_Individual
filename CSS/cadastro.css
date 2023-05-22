@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.navbar_conteiner{
+.navbar_conteiner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,12 +13,14 @@
     background: rgba(70, 70, 70, 0.9);
     height: 90px;
 }
-.navbar_conteiner .navbar_lista{
+
+.navbar_conteiner .navbar_lista {
     display: flex;
     width: 50%;
     align-items: center;
 }
-.logo_navbar img{
+
+.logo_navbar img {
     width: 140px;
     height: 70px;
     border-radius: 15px;
@@ -28,7 +30,7 @@
     margin: 15px;
 }
 
-.navbar_login{
+.navbar_login {
     border-radius: 15px;
     display: flex;
     justify-content: flex-end;
@@ -38,7 +40,7 @@
     width: 140px;
 }
 
-.navbar_login button{
+.navbar_login button {
     border: none;
     cursor: pointer;
     padding: 25px 45px 25px 25px;
@@ -49,7 +51,7 @@
     width: 100px;
 }
 
-.navbar_lista{
+.navbar_lista {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -57,15 +59,15 @@
     color: white;
 }
 
-.navbar_lista ul{
+.navbar_lista ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    text-align: center ;
+    text-align: center;
 }
 
-.background_login{
+.background_login {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -77,30 +79,112 @@
     padding-top: 10%;
 }
 
-.backgroundP{
+.backgroundP {
     display: flex;
     width: 100%;
-    height: auto; 
-    flex-direction: column;  
+    height: auto;
+    flex-direction: column;
     background-color: #e10000;
 }
 
-.backgroundP .navbar_conteiner{
+.backgroundP .navbar_conteiner {
     width: 100%;
 }
 
-.cadastro_conteiner{
-    height: 470px;
+.cadastro_conteiner {
     width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    border-radius: 15px;
-    background-color: rgba(255, 0, 0, 0.8);
-    padding-top: 45px;
+    height: 720px;
+    background: rgba(255, 0, 0, 0.8);
+    border-radius: 20px;
+    margin-top: 40px;
 }
 
-.cadastro_titulo{
+.cadastro_titulo {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    display: flex;
     color: white;
-    display: flexS;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.cadastro_subtitulo1 {
+    color: white;
+    position: absolute;
+    width: 297px;
+    height: 99px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 40px;
+    padding-bottom: 55px;
+}
+
+.cadastro_input1{
+    border-radius: 8px;
+    margin-top: 7vh;
+    text-align: start;
+    margin-left: 4vh;
+    width: 545px;
+    height: 25px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.cadastro_subtitulo2{
+    color: white;
+    position: absolute;
+    width: 297px;
+    height: 99px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 40px;
+    padding-bottom: 35px;
+}
+
+.cadastro_input2{
+    border-radius: 8px;
+    margin-top: 8vh;
+    text-align: start;
+    margin-left: 4vh;
+    width: 545px;
+    height: 25px;
+    border: none;
+    background-color: #d9d9d9;
+}
+
+.cadastro_conteiner button {
+    padding: 5px 93px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 30vh;
+    margin-top: 7vh;
+    border: none;
+    background-color: #d9d9d9;
+    height: 40px;
+}
+
+.cadastro_conteiner button:hover {
+    background-color: #5e1212;
+}
+
+.cadastro_link{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 23px;
+    color: black;
+    text-decoration: none;
 }
