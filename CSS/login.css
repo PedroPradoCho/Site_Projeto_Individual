@@ -67,6 +67,10 @@
     text-align: center;
 }
 
+.navbar_lista a{
+    color: white;
+}
+
 .background_login {
     display: flex;
     justify-content: center;
@@ -98,7 +102,7 @@
     height: 450px;
     background: rgba(255, 0, 0, 0.8);
     border-radius: 20px;
-    margin-top: 40px;
+    margin-top: 95px;
 }
 
 .login_titulo {

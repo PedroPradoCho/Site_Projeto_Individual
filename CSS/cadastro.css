@@ -67,12 +67,16 @@
     text-align: center;
 }
 
+.navbar_lista a{
+    color: white;
+}
+
 .background_login {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    height: 1856px;
+    height: 1105px;
     background-image: url(../LINKS/cadastro.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +97,7 @@
 
 .cadastro_conteiner {
     width: 600px;
-    height: 720px;
+    height: 890px;
     background: rgba(255, 0, 0, 0.8);
     border-radius: 20px;
     margin-top: 40px;
@@ -112,9 +116,8 @@
 
 .cadastro_subtitulo1 {
     color: white;
-    position: absolute;
     width: 297px;
-    height: 99px;
+    height: 70px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -123,25 +126,23 @@
     align-items: center;
     text-align: center;
     padding-left: 40px;
-    padding-bottom: 55px;
 }
 
 .cadastro_input1{
     border-radius: 8px;
-    margin-top: 7vh;
     text-align: start;
     margin-left: 4vh;
     width: 545px;
     height: 25px;
     border: none;
     background-color: #d9d9d9;
+    font-size: 15px;
 }
 
 .cadastro_subtitulo2{
     color: white;
-    position: absolute;
     width: 297px;
-    height: 99px;
+    height: 70px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -150,18 +151,17 @@
     align-items: center;
     text-align: center;
     padding-left: 40px;
-    padding-bottom: 35px;
 }
 
 .cadastro_input2{
     border-radius: 8px;
-    margin-top: 8vh;
     text-align: start;
     margin-left: 4vh;
     width: 545px;
     height: 25px;
     border: none;
     background-color: #d9d9d9;
+    font-size: 15px;
 }
 
 .cadastro_conteiner button {
