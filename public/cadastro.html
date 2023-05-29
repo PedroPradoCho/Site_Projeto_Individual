@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./CSS/cadastro.css">
+    <link rel="stylesheet" href="./SCRIPT/cadastro.js">
+</head>
+
+<body>
+    <div class="backgroundP">
+        <header>
+            <div class="navbar_conteiner">
+                <div class="logo_navbar">
+                    <a href="./index.html">
+                        <img src="./LINKS/logo.jpeg" alt="logo do site">
+                    </a>
+                </div>
+                <div class="navbar_lista">
+                    <ul>
+                        <li>
+                            <a class="home" href="./index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./skate.html">
+                                Skate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./graffiti.html">
+                                Graffiti
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./musica.html">
+                                Música
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar_login">
+                        <a href="./login.html">
+                            <button>
+                                Login
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="background_login">
+            <div class="cadastro_conteiner">
+                <h2 class="cadastro_titulo">CADASTRO</h2>
+                <h4 class="cadastro_subtitulo1">Nome Completo:</h4>
+                <input id="input_cadastro_nome" class="cadastro_input1">
+                <h4 class="cadastro_subtitulo2">Username:</h4>
+                <input id="input_cadastro_username" class="cadastro_input2">
+                <h4 class="cadastro_subtitulo2">E-mail:</h4>
+                <input id="input_cadastro_email" class="cadastro_input2">
+                <h4 class="cadastro_subtitulo2">Celular:</h4>
+                <input id="input_cadastro_celular" class="cadastro_input2">
+                <h4 class="cadastro_subtitulo2">Data de Nascimento:</h4>
+                <input id="input_cadastro_dtnasc" type="date" class="cadastro_input2">
+                <h4 class="cadastro_subtitulo2">Senha:</h4>
+                <input id="input_cadastro_senha" type="password" class="cadastro_input2">
+                <h4 class="cadastro_subtitulo2">Confirme sua Senha:</h4>
+                <input id="input_cadastro_confsenha" type="password" class="cadastro_input2">
+                <button onclick="cadastrar()">
+                    <h3>Entrar</h3>
+                </button>
+                <a class="cadastro_link" href="./login.html">LOGIN</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+    
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeCompleto = input_cadastro_nome.value;
+    var Username = input_cadastro_username.value;
+    var email = input_cadastro_email.value;
+    var celular = input_cadastro_celular.value;
+    var DtNasc = input_cadastro_dtnasc.value;
+    var senha = input_cadastro_senha.value;
+    var confirmacaoSenha = input_cadastro_confsenha.value;
+
+    if (nomeCompleto == "" || Username == "" || email == "" || celular == "" || DtNasc == "" || senha == "" || confirmacaoSenha == "") {
+        cardErro.style.display = "block"
+        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+        finalizarAguardar();
+        return false;
+    }
+    else {
+        setInterval(5000)
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            
+            nomeServer: nomeCompleto,
+            usarnameServer: Username,
+            emailServer: email,
+            celularServer: celular,
+            dtnascServer: DtNasc,
+            senhaServer: senha,
+            confsenhaServer: confirmacaoSenha
+
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            setTimeout(() => {
+                window.location = "../quiz.html";
+            }, "2000")
+
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`DEU ERRO AQUI FILHÃO: ${resposta}`);
+    });
+
+    return false;
+}
+</script>
