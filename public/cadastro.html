@@ -8,6 +8,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="./CSS/cadastro.css">
     <link rel="stylesheet" href="./SCRIPT/cadastro.js">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <div class="navbar_conteiner">
                 <div class="logo_navbar">
                     <a href="./index.html">
-                        <img src="./LINKS/logo.jpeg" alt="logo do site">
+                        <img src="./ASSETS/logo.jpeg" alt="logo do site">
                     </a>
                 </div>
                 <div class="navbar_lista">
@@ -79,65 +80,4 @@
 </body>
 
 </html>
-<script>
-    function cadastrar() {
-    
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeCompleto = input_cadastro_nome.value;
-    var Username = input_cadastro_username.value;
-    var email = input_cadastro_email.value;
-    var celular = input_cadastro_celular.value;
-    var DtNasc = input_cadastro_dtnasc.value;
-    var senha = input_cadastro_senha.value;
-    var confirmacaoSenha = input_cadastro_confsenha.value;
-
-    if (nomeCompleto == "" || Username == "" || email == "" || celular == "" || DtNasc == "" || senha == "" || confirmacaoSenha == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-        finalizarAguardar();
-        return false;
-    }
-    else {
-        setInterval(5000)
-    }
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            
-            nomeServer: nomeCompleto,
-            usarnameServer: Username,
-            emailServer: email,
-            celularServer: celular,
-            dtnascServer: DtNasc,
-            senhaServer: senha,
-            confsenhaServer: confirmacaoSenha
-
-        })
-    }).then(function (resposta) {
-
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-            setTimeout(() => {
-                window.location = "../quiz.html";
-            }, "2000")
-
-        } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
-        }
-    }).catch(function (resposta) {
-        console.log(`DEU ERRO AQUI FILHÃO: ${resposta}`);
-    });
-
-    return false;
-}
-</script>
+<script src="./SCRIPT/cadastro.js"></script>

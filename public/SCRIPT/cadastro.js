@@ -1,5 +1,5 @@
 function cadastrar() {
-
+    
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeCompleto = input_cadastro_nome.value;
@@ -10,15 +10,16 @@ function cadastrar() {
     var senha = input_cadastro_senha.value;
     var confirmacaoSenha = input_cadastro_confsenha.value;
 
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-        cardErro.style.display = "block"
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
-        finalizarAguardar();
+    if (nomeCompleto == "" || Username == "" || email == "" || celular == "" || DtNasc == "" || senha == "" || confirmacaoSenha == "") {
+            Swal.fire({
+            icon: 'error',
+            title: 'Campos Vazios',
+            text: 'Preencha todos os campos'
+          })
         return false;
     }
     else {
-        setInterval(sumirMensagem, 5000)
+        setInterval(1000)
     }
 
     // Enviando o valor da nova input
@@ -32,34 +33,31 @@ function cadastrar() {
             // Agora vá para o arquivo routes/usuario.js
             
             nomeServer: nomeCompleto,
-            usarnameServer: Username,
+            usernameServer: Username,
             emailServer: email,
             celularServer: celular,
             dtnascServer: DtNasc,
             senhaServer: senha,
             confsenhaServer: confirmacaoSenha
-
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-
-            mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
             setTimeout(() => {
                 window.location = "../quiz.html";
             }, "2000")
 
-            limparFormulario();
-            finalizarAguardar();
         } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro ao cadastrar',
+                text: 'Tente novamente!'
+              })
         }
     }).catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
+        console.log(`ERRO: ${resposta}`);
     });
 
     return false;

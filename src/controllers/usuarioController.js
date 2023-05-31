@@ -1,28 +1,4 @@
-var usuarioModel = require("../models/usuarioModel");
-
-var sessoes = [];
-
-function testar(req, res) {
-    console.log("ENTRAMOS NA usuarioController");
-    res.json("ESTAMOS FUNCIONANDO!");
-}
-
-function listar(req, res) {
-    usuarioModel.listar()
-        .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
-        }).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
+var usuarioModel = require("../models/usuarioModel")
 
 function entrar(req, res) {
     var email = req.body.emailServer;
@@ -63,7 +39,7 @@ function entrar(req, res) {
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
-    var username = req.body.usarnameServer;
+    var username = req.body.usernameServer;
     var email = req.body.emailServer;
     var celular = req.body.celularServer;
     var dtNasc = req.body.dtnascServer;
@@ -108,7 +84,5 @@ function cadastrar(req, res) {
 
 module.exports = {
     entrar,
-    cadastrar,
-    listar,
-    testar
+    cadastrar
 }

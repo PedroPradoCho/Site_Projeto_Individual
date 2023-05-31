@@ -86,7 +86,7 @@
 .background_skate{
     width: 100%;
     height: 100vh;
-    background-image: url(../LINKS/skate2.png);
+    background-image: url(../ASSETS/skate2.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

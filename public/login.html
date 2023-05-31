@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./CSS/login.css ">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
             <div class="navbar_conteiner">
                 <div class="logo_navbar">
                     <a href="./index.html">
-                        <img src="./LINKS/logo.jpeg" alt="logo do site">
+                        <img src="./ASSETS/logo.jpeg" alt="logo do site">
                     </a>
                 </div>
                 <div class="navbar_lista">
@@ -56,11 +57,10 @@
             <div class="login_conteiner">
                 <h2 class="login_titulo">LOGIN</h2>
                 <h4 class="login_subtitulo"> E-mail</h4>
-                <input class="login_input">
+                <input id="email_input" class="login_input">
                 <h4 class="login_senha"> Senha</h4>
-                <input class="senha_input" type="password">
-                <button ondblclick="entrar()">
-                    <a href="./quiz.html">
+                <input id="senha_input" type="password" class="senha_input" type="password">
+                <button onclick="entrar()">
                         <h3>Entrar</h3>
                     </a>
                 </button>
@@ -71,3 +71,4 @@
 </body>
 
 </html>
+<script src="./SCRIPT/login.js"></script>
