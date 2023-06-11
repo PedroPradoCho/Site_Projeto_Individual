@@ -50,7 +50,7 @@ span{
 .navbar_login button{
     border: none;
     cursor: pointer;
-    padding: 25px 45px 25px 25px;
+    padding: 19px 8px 0px 0px;
     background-color: #e10000;
     border-radius: 50px;
     color: white;
@@ -125,7 +125,7 @@ span{
 .background4{
     display: flex;
     width: 100%;
-    height: 150vh;
+    height: 140vh;
     background-image: url(../ASSETS/WUTANG.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,7 +179,7 @@ span{
 }
 
 .skate .corpo{
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: 23px;
     padding-left: 15px;
     padding-right: 15px;
@@ -235,11 +235,4 @@ span{
     font-size: 23px;
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.rodaPe{
-    width: 100%;
-    height: 150px;
-    background-color:rgba(122, 122, 122, 0.9);
-    margin-top: -150px;
 }

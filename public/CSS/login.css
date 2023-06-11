@@ -43,7 +43,7 @@
 .navbar_login button {
     border: none;
     cursor: pointer;
-    padding: 25px 45px 25px 25px;
+    padding: 19px 8px 0px 0px;
     background-color: #e10000;
     border-radius: 50px;
     color: white;
@@ -99,7 +99,7 @@
 .login_conteiner {
     position: absolute;
     width: 470px;
-    height: 450px;
+    height: 470px;
     background: rgba(255, 0, 0, 0.8);
     border-radius: 20px;
     margin-top: 95px;

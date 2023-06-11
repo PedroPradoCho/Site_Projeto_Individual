@@ -5,12 +5,10 @@ function cadastrar() {
     var nomeCompleto = input_cadastro_nome.value;
     var Username = input_cadastro_username.value;
     var email = input_cadastro_email.value;
-    var celular = input_cadastro_celular.value;
-    var DtNasc = input_cadastro_dtnasc.value;
     var senha = input_cadastro_senha.value;
     var confirmacaoSenha = input_cadastro_confsenha.value;
 
-    if (nomeCompleto == "" || Username == "" || email == "" || celular == "" || DtNasc == "" || senha == "" || confirmacaoSenha == "") {
+    if (nomeCompleto == "" || Username == "" || email == "" || senha == "" || confirmacaoSenha == "") {
             Swal.fire({
             icon: 'error',
             title: 'Campos Vazios',
@@ -35,8 +33,6 @@ function cadastrar() {
             nomeServer: nomeCompleto,
             usernameServer: Username,
             emailServer: email,
-            celularServer: celular,
-            dtnascServer: DtNasc,
             senhaServer: senha,
             confsenhaServer: confirmacaoSenha
         })
@@ -46,7 +42,7 @@ function cadastrar() {
 
         if (resposta.ok) {
             setTimeout(() => {
-                window.location = "../quiz.html";
+                window.location = "../login.html";
             }, "2000")
 
         } else {

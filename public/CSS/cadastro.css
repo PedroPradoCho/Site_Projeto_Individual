@@ -43,7 +43,7 @@
 .navbar_login button {
     border: none;
     cursor: pointer;
-    padding: 25px 45px 25px 25px;
+    padding: 19px 8px 0px 0px;
     background-color: #e10000;
     border-radius: 50px;
     color: white;
@@ -97,10 +97,11 @@
 
 .cadastro_conteiner {
     width: 600px;
-    height: 890px;
+    height: auto;
     background: rgba(255, 0, 0, 0.8);
     border-radius: 20px;
     margin-top: 40px;
+    padding-bottom: 30px;
 }
 
 .cadastro_titulo {
@@ -133,7 +134,7 @@
     text-align: start;
     margin-left: 4vh;
     width: 545px;
-    height: 25px;
+    height: 30px;
     border: none;
     background-color: #d9d9d9;
     font-size: 15px;
@@ -159,7 +160,7 @@
     text-align: start;
     margin-left: 4vh;
     width: 545px;
-    height: 25px;
+    height: 30px;
     border: none;
     background-color: #d9d9d9;
     font-size: 15px;
@@ -171,7 +172,7 @@
     font-size: 14px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 30vh;
+    margin-left: 26vh;
     margin-top: 7vh;
     border: none;
     background-color: #d9d9d9;

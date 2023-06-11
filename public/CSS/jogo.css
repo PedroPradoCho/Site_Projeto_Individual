@@ -1,3 +1,8 @@
+@font-face {
+    font-family: pedro;
+    src: local(pedro), url('../ASSETS/FONTES/adrip1.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -78,109 +83,50 @@ span{
 .backgroundP {
     background-color: #c51010;
     width: 100%;
-    height: 1240px;
-}
-
-.div_conteiner {
-    width: 100%;
     height: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
 }
 
-.div_titulo {
-    margin-top: 110px;
-    font-size: 50px;
-    color: white;
-}
-
-.div_subtitulo {
-    font-size: 30px;
-    margin-top: 20px;
-    color: white;
+.titulo{
+    font-family: pedro;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding-top: 130px;
+    font-size: 40px;
 }
 
+.img1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
-.bases{
-    width: 100%;
-    height: auto;
+.option{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin-top: 60px;
-    font-size: 35px;
-    color: white;
+    padding-bottom: 60px;
 }
-.regular {
+.opc1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+.botao{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-    margin-left: 65px;
-}
-
-.regular span{
-    padding-bottom: 10px;
-    font-size: 15px;
-}
-
-.goofy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-}
-
-.goofy span{
-    padding-bottom: 10px;
-    font-size: 15px;
-}
-
-.diversos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-    margin-top: 40px;
-    color: white;
-}
-
-.explicado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-    margin-top: 40px;
-    color: white; 
-}
-
-.explicado span{
-    padding-bottom: 15px;
-}
-
-.botao {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    padding-bottom: 40px;
 }
 
 .botao button{
-    width: 150px;
-    height: 60px;
+    width: 170px;
+    height: 65px;
+    border-radius: 15px;
     border: none;
-    background-color: #d9d9d9;
-    cursor: pointer;
-    border-radius: 10px;
 }
 
 .botao button:hover {

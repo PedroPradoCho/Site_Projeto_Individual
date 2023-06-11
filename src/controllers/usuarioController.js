@@ -41,8 +41,6 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var username = req.body.usernameServer;
     var email = req.body.emailServer;
-    var celular = req.body.celularServer;
-    var dtNasc = req.body.dtnascServer;
     var senha = req.body.senhaServer;
     var confSenha = req.body.confsenhaServer;
 
@@ -53,10 +51,6 @@ function cadastrar(req, res) {
         res.status(400).send("Seu username está undefined!");
     } else if (email == undefined) {
         res.status(400).send("Seu email está undefined!");
-    } else if(celular == undefined){
-        res.status(400).send("Seu celular está undefined!");
-    } else if( dtNasc == undefined){
-        res.status(400).send("Sua data de nascimento está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else if(confSenha != senha){
@@ -64,7 +58,39 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, username, email, celular, dtNasc, senha)
+        usuarioModel.cadastrar(nome, username, email, senha)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function pontuar(req, res) {
+
+    var qtdAcertos = req.params.qtdAcertosServer;
+    var idUsuario = req.params.idUsuarioServer;
+
+
+    // Faça as validações dos valores
+    if (qtdAcertos == undefined) {
+        res.status(400).send("Quantidade de acertos undefined!");
+    } else if(idUsuario == undefined){
+        res.status(400).send("ID undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.pontuar(qtdAcertos, idUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -84,5 +110,6 @@ function cadastrar(req, res) {
 
 module.exports = {
     entrar,
-    cadastrar
+    cadastrar,
+    pontuar
 }
