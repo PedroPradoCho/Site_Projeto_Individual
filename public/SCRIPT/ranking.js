@@ -11,7 +11,8 @@ function carregarTop10() {
         if (resposta.ok) {
             resposta.json().then(result => {
                 var posicao = 0
-                result.forEach(tabelas => {
+                for(var i =0; i < result.length; i++){
+                    var tabelas = result[i];
                     posicao++
                     document.getElementById("container").innerHTML += `
                     <div class="tabela">
@@ -30,7 +31,7 @@ function carregarTop10() {
                     </div>
                     `
                     console.log(tabelas)
-                });
+                };
             })
 
         } else {
@@ -62,7 +63,8 @@ function carregarPorcentagem(){
         if (resposta.ok) {
             resposta.json().then(result => {
                     vezes = 0
-                    result.forEach(tabelas => {
+                    for(var i =0; i < result.length; i++){
+                        var tabelas = result[i]; 
                         vezes++
                         document.getElementById("porcentagem").innerHTML +=`
                         <div class="tabela">
@@ -80,7 +82,7 @@ function carregarPorcentagem(){
                             </div>
                         </div>
                         `
-                    })
+                    }
                 });
 
         } else {
